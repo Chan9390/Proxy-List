@@ -1,107 +1,185 @@
 import requests
 from time import sleep
 
-proxylist = ["http://canadaproxy.info",
-"http://justunblockit.com",
-"http://proxyinternet.info",
-"http://webproxyfree.net",
-"https://www.extremeproxy.us",
-"http://krproxy.info",
-"http://hostapp.eu",
-"https://funproxy.net",
-"http://zendproxy.com",
-"https://www.networkbypass.com",
-"http://dzhot.us",
-"https://www.proxypirate.co.uk",
-"http://www.zalmos.com",
-"https://www.proxytube.info",
-"http://interncloud.info",
-"http://proxy4freedom.com",
-"https://www.sslproxy.org.uk",
-"http://vpnbrowse.com",
-"http://proxys.pw",
-"http://www.phproxysite.com",
-"http://travelvpn.info",
-"http://www.proxy-2014.com",
-"http://anonymouse.org",
-"http://surf-for-free.com",
-"http://greatestfreeproxy.com",
-"https://www.crazyproxy.org",
-"http://websurfproxy.me",
-"http://viewyoutube.net",
-"http://www.unblockmyweb.com",
-"http://youserver.nu",
-"https://www.mehide.asia",
-"http://fastusaproxy.com",
-"http://www.unblockmyweb.com",
-"http://hidetheinternet.com",
-"http://fbproxies.info",
-"http://krproxy.info",
-"http://prointern.info",
-"http://youliaoren.com",
-"http://fishproxy.com",
-"http://newipnow.com",
-"http://www.quickproxy.co.uk",
-"http://tiafun.com",
-"http://unblockyoutubefree.net",
-"http://saoudiproxy.info",
-"http://proxybrowse.info",
-"http://sporium.org",
-"http://jezuslovesthisproxy.info",
-"http://german-proxy.info",
-"http://caproxies.info",
-"http://proxy-internet.info",
-"http://fbproxies.info",
-"http://americaproxy.info",
-"http://proxy-2015.info",
-"http://suedeproxy.info",
-"http://toproxy.co",
-"http://pkproxy.info",
-"http://youtubeu.info",
-"http://interncloud.info/",
-"http://travelvpn.info/",
-"http://fasttime.info/",
-"http://proxybrowse.info/",
-"https://hideipproxy.com",
-"http://fishproxy.com",
-"http://rexoss.com/",
-"http://surfproxy.co/",
-"https://www.hidemyass.com/",
+proxylist = [
+# Numbers
 "http://5proxy.xyz/",
-"http://zendproxy.com/",
-"http://www.youtubeunblockproxy.com/",
-"http://proxy.org/",
-"https://www.englandproxy.co.uk/",
-"https://www.unblocker.us/",
-"http://o-itc.be/",
-"http://fastusaproxy.com/",
-"http://hide.mx",
-"http://freeproxy.party/",
+"http://4everproxy.com/",
+"http://1freeproxy.pw",
+
+# A
+"http://anonymouse.org",
+"http://americaproxy.info",
+"http://www.anonymizer.com/",
+
+# B
 "https://www.best-proxy.co.uk/",
-"http://newipnow.com",
-"http://vtunnel.com/",
-"https://www.justunblockit.com",
+"http://bitswork.info/",
+"http://www.blewpass.com/",
+"http://brazilproxy.info",
+
+# C
+"http://canadaproxy.info",
+"https://www.crazyproxy.org",
+"http://caproxies.info",
+"http://cantblockthis.org",
+
+# D 
+"http://dzhot.us",
+"http://www.dontfilter.us/",
+"http://defilter.us",
+
+# E 
+"https://www.extremeproxy.us",
+"https://www.englandproxy.co.uk/",
+"http://ecxs.asia",
+
+# F 
+"https://funproxy.net",
+"http://fastusaproxy.com",
+"http://fbproxies.info",
+"http://fishproxy.com",
+"http://fasttime.info/",
+"http://freeproxy.party/",
+"http://freeopenproxy.com",
+"http://freeyoutube.net",
+"http://freeproxyserver.uk",
+"http://freeyouproxytube.com",
+"http://f4fp.com",
+"http://fishproxy.com",
+
+# G 
+"http://greatestfreeproxy.com",
+"http://german-proxy.info",
 "https://www.goproxy.asia/",
-"https://www.networkbypass.com/",
-"https://www.mehide.asia/",
+"http://gizlenin.com",
+"http://goproxy.asia",
+
+# H 
+"http://hostapp.eu",
+"http://hidetheinternet.com",
+"https://hideipproxy.com",
+"http://hide.mx",
+"http://hidingyour.info",
+"https://www.hidemyass.com/proxy",
+"https://hidemytraxproxy.ca/",
+"http://hiddendigital.info",
+
+# I 
+"http://interncloud.info",
+
+# J 
+"http://justunblockit.com",
+"http://jezuslovesthisproxy.info",
+"http://justproxy.co.uk",
+
+# K 
+"http://krproxy.info",
+"http://www.kproxysite.com/",
+"http://www.kproxy.com/",
+
+# L 
+"http://londonproxy.eu",
+
+# M 
+"https://www.mehide.asia",
+
+# N 
+"https://www.networkbypass.com",
+"http://newipnow.com",
+"http://ninjacloak.com/",
+
+# O 
+"http://o-itc.be/",
+
+# P 
+"http://proxyinternet.info",
+"https://www.proxypirate.co.uk",
+"https://www.proxytube.info",
+"http://proxy4freedom.com",
+"http://proxys.pw",
+"http://www.proxy-2014.com",
+"http://proxy-2015.info",
+"http://prointern.info",
+"http://proxybrowse.info",
+"http://proxy-internet.info",
+"http://pkproxy.info",
+"http://proxy.org/",
 "https://www.proxythis.info/",
 "http://www.phproxysite.com/",
-"http://xitenow.com/",
-"http://4everproxy.com/",
-"http://www.kproxysite.com/",
-"http://surf-for-free.com/",
-"http://interncloud.info/",
-"http://prointern.info/",
-"http://singaporeproxy.nu/",
-"http://workhost.eu/",
-"http://travelvpn.info/",
-"http://bitswork.info/",
-"http://fasttime.info/",
+"https://www.proxysite.com/",
+"http://proxify.com/p/",
+"http://proxy2014.net",
+"http://proxyo.info",
+"https://proxyone.net",
+"http://www.proxay.co.uk",
+"http://pro-unblock.com",
+"http://proxy4freedom.com",
+"http://www.proxypower.co.uk",
+"http://phproxy.co",
+"http://proxys.pw",
+"http://proxmecallmenames.com",
+
+# Q 
+"http://www.quickproxy.co.uk",
+
+# R 
 "http://rexoss.com/",
-"http://hidingyour.info",
-"https://hideipproxy.com/",
-"http://hostapp.eu/",
-"https://www.proxysite.com/"]
+"http://rapidproxy.us",
+
+# S 
+"https://www.sslproxy.org.uk",
+"http://surf-for-free.com",
+"http://saoudiproxy.info",
+"http://sporium.org",
+"http://suedeproxy.info",
+"http://surfproxy.co/",
+"http://singaporeproxy.nu/",
+"http://stardollproxy.com",
+"http://spedo.co",
+
+# T 
+"http://travelvpn.info",
+"http://tiafun.com",
+"http://toproxy.co",
+"http://thebestproxy.info",
+
+# U 
+"http://www.unblockmyweb.com",
+"http://unblockyoutubefree.net",
+"https://www.unblocker.us/",
+"http://unblockyoutubeatschool.com",
+"http://unblocker.us",
+"http://usproxies.info",
+"http://usproxy.nu",
+
+# V 
+"http://vpnbrowse.com",
+"http://viewyoutube.net",
+"http://vtunnel.com/",
+"http://www.vobas.com/",
+
+# W 
+"http://webproxyfree.net",
+"http://websurfproxy.me",
+"http://workhost.eu/",
+"http://webproxy.net/",
+"http://workingproxy.net",
+
+# X 
+"http://xitenow.com/",
+
+# Y 
+"http://youserver.nu",
+"http://youliaoren.com",
+"http://youtubeu.info",
+"http://www.youtubeunblockproxy.com/",
+"http://youtubefreeproxy.net",
+
+# Z
+"http://zendproxy.com",
+"http://www.zalmos.com",
+"http://zacebookpk.com"]
 
 for something in proxylist:
 	try:
